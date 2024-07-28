@@ -7,4 +7,72 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Problems\0041. First Missing Positive.java" />
+    <None Remove="Problems\0042. Trapping Rain Water.java" />
+    <None Remove="Problems\0069. Sqrt(x).java" />
+    <None Remove="Problems\0085. Maximal Rectangle.java" />
+    <None Remove="Problems\0135. Candy.java" />
+    <None Remove="Problems\0136. Single Number.java" />
+    <None Remove="Problems\0140. Word Break II.java" />
+    <None Remove="Problems\0190. Reverse Bits.java" />
+    <None Remove="Problems\0191. Number of 1 Bits.java" />
+    <None Remove="Problems\0330. Patching Array.java" />
+    <None Remove="Problems\0350. Intersection of Two Arrays II.java" />
+    <None Remove="Problems\0367. Valid Perfect Square.java" />
+    <None Remove="Problems\0502. IPO.java" />
+    <None Remove="Problems\0514. Freedom Trail.java" />
+    <None Remove="Problems\0552. Student Attendance Record II.java" />
+    <None Remove="Problems\0834. Sum of Distances in Tree.java" />
+    <None Remove="Problems\0857. Minimum Cost to Hire K Workers.java" />
+    <None Remove="Problems\0995. Minimum Number of K Consecutive Bit Flips.java" />
+    <None Remove="Problems\1002. Find Common Characters.java" />
+    <None Remove="Problems\1051. Height Checker.java" />
+    <None Remove="Problems\1122. Relative Sort Array.java" />
+    <None Remove="Problems\1255. Maximum Score Words Formed by Letters.java" />
+    <None Remove="Problems\1289. Minimum Falling Path Sum II.java" />
+    <None Remove="Problems\1518. Water Bottles.java" />
+    <None Remove="Problems\1550. Three Consecutive Odds.java" />
+    <None Remove="Problems\1588. Sum of All Odd Length Subarrays.java" />
+    <None Remove="Problems\1791. Find Center of Star Graph.java" />
+    <None Remove="Problems\2037. Minimum Number of Moves to Seat Everyone.java" />
+    <None Remove="Problems\2582. Pass the Pillow.java" />
+    <None Remove="Problems\2778. Sum of Squares of Special Elements.java" />
+    <None Remove="Problems\3068. Find the Maximum Sum of Node Values.java" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Problems\Bit Manipulation\0136. Single Number.java" />
+    <Compile Include="Problems\Bit Manipulation\0191. Number of 1 Bits.java" />
+    <Compile Include="Problems\Hash Table\1002. Find Common Characters.java" />
+    <Compile Include="Problems\Sorting\1051. Height Checker.java" />
+    <Compile Include="Problems\Hash Table\1122. Relative Sort Array.java" />
+    <Compile Include="Problems\Math\1550. Three Consecutive Odds.java" />
+    <Compile Include="Problems\Graph\1791. Find Center of Star Graph.java" />
+    <Compile Include="Problems\Bit Manipulation\0190. Reverse Bits.java" />
+    <Compile Include="Problems\Greedy\2037. Minimum Number of Moves to Seat Everyone.java" />
+    <Compile Include="Problems\Math\2778. Sum of Squares of Special Elements.java" />
+    <Compile Include="Problems\Binary Search\0069. Sqrt%28x%29.java" />
+    <Compile Include="Problems\Hash Table\0350. Intersection of Two Arrays II.java" />
+    <Compile Include="Problems\Simulation\1518. Water Bottles.java" />
+    <Compile Include="Problems\Prefix Sum\1588. Sum of All Odd Length Subarrays.java" />
+    <Compile Include="Problems\Binary Search\0367. Valid Perfect Square.java" />
+    <Compile Include="Problems\Math\2582. Pass the Pillow.java" />
+    <Compile Include="Problems\Hash Table\0041. First Missing Positive.java" />
+    <Compile Include="Problems\Monotonic Stack\0042. Trapping Rain Water.java" />
+    <Compile Include="Problems\Dynamic Programming\0085. Maximal Rectangle.java" />
+    <Compile Include="Problems\Greedy\0135. Candy.java" />
+    <Compile Include="Problems\Trie\0140. Word Break II.java" />
+    <Compile Include="Problems\Greedy\0330. Patching Array.java" />
+    <Compile Include="Problems\Priority Queue\0502. IPO.java" />
+    <Compile Include="Problems\Dynamic Programming\0514. Freedom Trail.java" />
+    <Compile Include="Problems\Dynamic Programming\0552. Student Attendance Record II.java" />
+    <Compile Include="Problems\Dynamic Programming\0834. Sum of Distances in Tree.java" />
+    <Compile Include="Problems\Priority Queue\0857. Minimum Cost to Hire K Workers.java" />
+    <Compile Include="Problems\Sliding Window\0995. Minimum Number of K Consecutive Bit Flips.java" />
+    <Compile Include="Problems\Backtracking\1255. Maximum Score Words Formed by Letters.java" />
+    <Compile Include="Problems\Dynamic Programming\1289. Minimum Falling Path Sum II.java" />
+    <Compile Include="Problems\Greedy\3068. Find the Maximum Sum of Node Values.java" />
+  </ItemGroup>
+
 </Project>

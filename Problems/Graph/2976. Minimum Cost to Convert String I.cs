@@ -1,11 +1,16 @@
 ﻿namespace Problem2976
 {
+
   /// <summary>
   /// 2976. Minimum Cost to Convert String I
-  /// https://leetcode.com/problems/minimum-cost-to-convert-string-i/?envType=daily-question&envId=2024-07-27
+  /// https://leetcode.com/problems/minimum-cost-to-convert-string-i
+  /// 
   /// Difficulty Medium 54.6%
   /// 
   /// Floyd Warshall Algorithm
+  /// 
+  /// Array
+  /// String
   /// Graph
   /// Shortest Path
   /// </summary>
