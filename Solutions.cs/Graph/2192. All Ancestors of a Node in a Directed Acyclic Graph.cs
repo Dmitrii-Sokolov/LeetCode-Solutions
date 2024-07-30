@@ -12,7 +12,7 @@
   /// Graph
   /// Topological Sort
   /// </summary>
-  internal class Solution
+  public class Solution
   {
     public IList<IList<int>> GetAncestors(int n, int[][] edges)
     {
