@@ -1,73 +1,30 @@
-﻿namespace Problem1579
+﻿namespace Problem1971
 {
 
   /// <summary>
-  /// 1579. Remove Max Number of Edges to Keep Graph Fully Traversable
-  /// https://leetcode.com/problems/remove-max-number-of-edges-to-keep-graph-fully-traversable
+  /// 1971. Find if Path Exists in Graph
+  /// https://leetcode.com/problems/find-if-path-exists-in-graph
   /// 
-  /// Difficulty Hard
-  /// Acceptance 71.0%
+  /// Difficulty Easy
+  /// Acceptance 54.1%
   /// 
+  /// Depth-First Search
+  /// Breadth-First Search
   /// Union Find
   /// Graph
   /// </summary>
   public class Solution
   {
-    public int MaxNumEdgesToRemove(int n, int[][] edges)
+    public bool ValidPath(int n, int[][] edges, int source, int destination)
     {
-      if (edges.Length < n - 1)
-        return -1;
-
-      var graphUnion = new UnionFind(n);
-      var edges1 = new List<(int A, int B)>();
-      var edges2 = new List<(int A, int B)>();
-      var lack = n - 1;
-
-      foreach (var edge in edges)
-      {
-        var type = edge[0];
-        if (type == 1)
-        {
-          edges1.Add((edge[1], edge[2]));
-        }
-        else if (type == 2)
-        {
-          edges2.Add((edge[1], edge[2]));
-        }
-        else
-        {
-          if (graphUnion.TryUnite(edge[1], edge[2]))
-          {
-            lack--;
-
-            if (lack == 0)
-              return edges.Length - n + 1;
-          }
-        }
-      }
-
-      var graphUnionClone = new UnionFind(graphUnion);
-      if (IsBad(graphUnionClone, edges1, lack) ||
-        IsBad(graphUnion, edges2, lack))
-        return -1;
-
-      return edges.Length - n + 1 - lack;
-    }
-
-    private static bool IsBad(UnionFind graphUnion, List<(int A, int B)> edges, int lack)
-    {
-      if (edges.Count < lack)
+      if (source == destination)
         return true;
 
+      var union = new UnionFind(n);
       foreach (var edge in edges)
-      {
-        if (graphUnion.TryUnite(edge.A, edge.B))
-          lack--;
+        union.TryUnite(edge[0], edge[1]);
 
-        if (lack == 0)
-          return false;
-      }
-      return lack > 0;
+      return union.IsUnited(source, destination);
     }
 
     private class UnionFind
@@ -94,11 +51,11 @@
         Groups = other.Groups;
       }
 
+      public bool IsUnited(int node0, int node1)
+        => node0 == node1 || FindSubroot(node0) == FindSubroot(node1);
+
       public bool TryUnite(int node0, int node1)
       {
-        node0--;
-        node1--;
-
         if (node0 == node1)
           return false;
 
