@@ -119,6 +119,8 @@
           ChildrenCount[node0] += ChildrenCount[node1];
         }
 
+        Groups--;
+
         return true;
       }
 
