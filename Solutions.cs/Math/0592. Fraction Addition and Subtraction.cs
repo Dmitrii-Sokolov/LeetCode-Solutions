@@ -1,46 +1,50 @@
-﻿/// <summary>
-/// 592. Fraction Addition and Subtraction
-/// https://leetcode.com/problems/fraction-addition-and-subtraction
-/// 
-/// Difficulty Medium
-/// Acceptance 58.1%
-/// 
-/// Math
-/// String
-/// Simulation
-/// </summary>
-public class Solution
+﻿namespace Problem592
 {
-  public string FractionAddition(string expression)
+
+  /// <summary>
+  /// 592. Fraction Addition and Subtraction
+  /// https://leetcode.com/problems/fraction-addition-and-subtraction
+  /// 
+  /// Difficulty Medium
+  /// Acceptance 58.1%
+  /// 
+  /// Math
+  /// String
+  /// Simulation
+  /// </summary>
+  public class Solution
   {
-    var commonDenominator = 10 * 9 * 4 * 7;
-    var regex = "(-?\\d*)[\\/?](\\d*)";
-    var pairs = System.Text.RegularExpressions.Regex.Match(expression, regex);
-    var resultNumerator = 0;
-    var resultDenominator = commonDenominator;
-
-    while (pairs.Success)
+    public string FractionAddition(string expression)
     {
-      var numerator = int.Parse(pairs.Groups[1].Value);
-      var denominator = int.Parse(pairs.Groups[2].Value);
+      var commonDenominator = 10 * 9 * 4 * 7;
+      var regex = "(-?\\d*)[\\/?](\\d*)";
+      var pairs = System.Text.RegularExpressions.Regex.Match(expression, regex);
+      var resultNumerator = 0;
+      var resultDenominator = commonDenominator;
 
-      var multiplier = commonDenominator / denominator;
-      resultNumerator += numerator * multiplier;
-
-      pairs = pairs.NextMatch();
-    }
-
-    int[] components = { 5, 2, 3, 3, 2, 2, 7 };
-
-    foreach (var component in components)
-    {
-      if (resultNumerator % component == 0)
+      while (pairs.Success)
       {
-        resultNumerator /= component;
-        resultDenominator /= component;
-      }
-    }
+        var numerator = int.Parse(pairs.Groups[1].Value);
+        var denominator = int.Parse(pairs.Groups[2].Value);
 
-    return $"{resultNumerator}/{resultDenominator}";
+        var multiplier = commonDenominator / denominator;
+        resultNumerator += numerator * multiplier;
+
+        pairs = pairs.NextMatch();
+      }
+
+      int[] components = { 5, 2, 3, 3, 2, 2, 7 };
+
+      foreach (var component in components)
+      {
+        if (resultNumerator % component == 0)
+        {
+          resultNumerator /= component;
+          resultDenominator /= component;
+        }
+      }
+
+      return $"{resultNumerator}/{resultDenominator}";
+    }
   }
 }
