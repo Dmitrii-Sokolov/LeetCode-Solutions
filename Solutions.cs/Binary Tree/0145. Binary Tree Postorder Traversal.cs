@@ -1,38 +1,42 @@
-﻿/// <summary>
-/// 145. Binary Tree Postorder Traversal
-/// https://leetcode.com/problems/binary-tree-postorder-traversal
-/// 
-/// Difficulty Easy
-/// Acceptance 72.5%
-/// 
-/// Stack
-/// Tree
-/// Depth-First Search
-/// Binary Tree
-/// </summary>
-public class Solution
+﻿namespace Problem145
 {
-  public IList<int> PostorderTraversal(TreeNode root)
+
+  /// <summary>
+  /// 145. Binary Tree Postorder Traversal
+  /// https://leetcode.com/problems/binary-tree-postorder-traversal
+  /// 
+  /// Difficulty Easy
+  /// Acceptance 72.5%
+  /// 
+  /// Stack
+  /// Tree
+  /// Depth-First Search
+  /// Binary Tree
+  /// </summary>
+  public class Solution
   {
-    var result = new List<int>();
-    var stack = new Stack<TreeNode>();
-
-    if (root != null)
-      stack.Push(root);
-
-    while (stack.TryPop(out var node))
+    public IList<int> PostorderTraversal(TreeNode root)
     {
-      if (node.left != null)
-        stack.Push(node.left);
+      var result = new List<int>();
+      var stack = new Stack<TreeNode>();
 
-      if (node.right != null)
-        stack.Push(node.right);
+      if (root != null)
+        stack.Push(root);
 
-      result.Add(node.val);
+      while (stack.TryPop(out var node))
+      {
+        if (node.left != null)
+          stack.Push(node.left);
+
+        if (node.right != null)
+          stack.Push(node.right);
+
+        result.Add(node.val);
+      }
+
+      result.Reverse();
+
+      return result;
     }
-
-    result.Reverse();
-
-    return result;
   }
 }
