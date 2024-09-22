@@ -16,22 +16,26 @@
     public IList<int> LexicalOrder(int n)
     {
       var result = new List<int>(n);
+      var stack = new Stack<int>();
+      stack.Push(1);
+      while (result.Count < n)
+      {
+        if (stack.Peek() <= n)
+        {
+          result.Add(stack.Peek());
+          stack.Push(10 * stack.Peek());
+        }
+        else
+        {
+          stack.Pop();
+          while (stack.Peek() % 10 == 9)
+            stack.Pop();
 
-      for (var i = 1; i < 10; i++)
-        ProcessPrefix(result, n, i);
+          stack.Push(stack.Pop() + 1);
+        }
+      }
 
       return result;
-    }
-
-    private static void ProcessPrefix(List<int> result, int n, int prefix)
-    {
-      if (prefix > n)
-        return;
-
-      result.Add(prefix);
-
-      for (var i = 0; i < 10; i++)
-        ProcessPrefix(result, n, 10 * prefix + i);
     }
   }
 }
