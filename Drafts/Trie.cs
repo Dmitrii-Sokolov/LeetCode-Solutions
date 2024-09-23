@@ -15,6 +15,12 @@
       Root = new Node();
     }
 
+    public Trie(string[] words) : this()
+    {
+      foreach (var word in words)
+        Insert(word);
+    }
+
     public void Insert(string word)
     {
       var node = Root;
@@ -22,17 +28,31 @@
       foreach (var letter in word)
       {
         var c = letter - 'a';
-
-        if (node.Nodes == null)
-          node.Nodes = new Node[26];
-
-        if (node.Nodes[c] == null)
-          node.Nodes[c] = new Node();
-
+        node.Nodes ??= new Node[26];
+        node.Nodes[c] ??= new Node();
         node = node.Nodes[c];
       }
 
       node.Finish = true;
+    }
+
+    public IEnumerable<int> GetAllWordLengths(string sentence, int from = 0)
+    {
+      var node = Root;
+      var depth = 0;
+      for (var i = from; i < sentence.Length; i++)
+      {
+        var letter = sentence[i];
+        var c = letter - 'a';
+        if (node.Nodes == null || node.Nodes[c] == null)
+          break;
+
+        node = node.Nodes[c];
+        depth++;
+
+        if (node.Finish)
+          yield return depth;
+      }
     }
 
     public bool Search(string word)
@@ -73,6 +93,7 @@
 
         node = node.Nodes[c];
       }
+
       return true;
     }
   }
