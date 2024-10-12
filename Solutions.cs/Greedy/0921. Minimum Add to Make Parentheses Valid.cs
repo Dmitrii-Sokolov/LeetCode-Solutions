@@ -22,7 +22,9 @@
       foreach (var c in s)
       {
         if (c == '(')
+        {
           balance++;
+        }
         else
         {
           balance--;

@@ -3,6 +3,10 @@
   public static class Math
   {
     private static int Mod(int x, int m) => (x % m + m) % m;
+
+    private static bool IsIntersect(int[] a, int[] b)
+      => b[0] <= a[0] && a[0] <= b[1] ||
+      a[0] <= b[0] && b[0] <= a[1];
   }
 
   public struct Vector2(int x, int y) : IEquatable<Vector2>
