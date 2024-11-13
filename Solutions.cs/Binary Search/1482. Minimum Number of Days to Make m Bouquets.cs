@@ -35,7 +35,9 @@
         var middle = (min + max) >> 1;
 
         if (Check(bloomDay, m, k, middle))
+        {
           max = middle;
+        }
         else
         {
           min = middle + 1;
@@ -66,6 +68,7 @@
           adj++;
           i++;
         }
+
         m -= adj / k;
         adj = 0;
 

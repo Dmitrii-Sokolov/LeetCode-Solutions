@@ -42,13 +42,15 @@
 
           if (j < len && fraction < arr[i] * 1.0 / arr[j])
           {
-            result = new int[] { arr[i], arr[j] };
+            result = [arr[i], arr[j]];
             fraction = arr[i] * 1.0 / arr[j];
           }
         }
 
         if (count == total - k)
+        {
           return result;
+        }
         else if (count < total - k)
         {
           right = middle;

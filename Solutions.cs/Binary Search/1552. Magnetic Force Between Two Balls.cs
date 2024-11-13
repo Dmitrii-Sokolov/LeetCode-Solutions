@@ -18,12 +18,12 @@
     {
       Array.Sort(position);
       var min = 1;
-      var max = (position[position.Length - 1] - position[0]) / (m - 1);
+      var max = (position[^1] - position[0]) / (m - 1);
       var result = max;
 
       while (min <= max)
       {
-        var middle = min + ((max - min) / 2);
+        var middle = min + (max - min) / 2;
 
         if (Check(position, m, middle))
         {
@@ -39,7 +39,7 @@
       return result;
     }
 
-    private bool Check(int[] position, int m, int x)
+    private static bool Check(int[] position, int m, int x)
     {
       var last = position[0];
       m--;

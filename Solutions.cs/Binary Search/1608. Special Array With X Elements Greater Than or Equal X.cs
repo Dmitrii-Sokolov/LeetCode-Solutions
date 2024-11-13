@@ -31,7 +31,9 @@
         }
 
         if (count == middle)
+        {
           return count;
+        }
         else if (count < middle)
         {
           max = middle - 1;

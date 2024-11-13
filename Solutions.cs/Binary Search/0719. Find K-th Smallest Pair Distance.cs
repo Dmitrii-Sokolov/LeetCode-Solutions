@@ -29,7 +29,9 @@
         var (count, sum) = CountLesserSums(numbers, middle);
 
         if (count < targetCount)
+        {
           min = middle + 1;
+        }
         else if (count > targetCount)
         {
           max = sum;
@@ -43,7 +45,7 @@
       return max;
     }
 
-    private (int Count, int Max) CountLesserSums(int[] numbers, int threshold)
+    private static (int Count, int Max) CountLesserSums(int[] numbers, int threshold)
     {
       var result = 0;
       var offset = 0;

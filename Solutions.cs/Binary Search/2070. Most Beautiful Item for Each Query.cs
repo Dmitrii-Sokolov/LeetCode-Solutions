@@ -40,7 +40,9 @@
       {
         var middle = 1 + (max + min >> 1);
         if (items[middle].Price > price)
+        {
           max = middle - 1;
+        }
         else
         {
           min = middle;
