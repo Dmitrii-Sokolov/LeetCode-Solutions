@@ -46,7 +46,9 @@
       {
         var middle = max + min >> 1;
         if (numbers[middle] >= edge)
+        {
           max = middle;
+        }
         else
         {
           min = middle + 1;
@@ -65,7 +67,9 @@
       {
         var middle = 1 + (max + min >> 1);
         if (numbers[middle] <= edge)
+        {
           min = middle;
+        }
         else
         {
           max = middle - 1;

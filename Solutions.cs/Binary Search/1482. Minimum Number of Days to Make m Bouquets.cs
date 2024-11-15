@@ -47,7 +47,7 @@
       return max;
     }
 
-    private bool Check(int[] bloomDay, int m, int k, int x)
+    private static bool Check(int[] bloomDay, int m, int k, int x)
     {
       var adj = 0;
       var n = bloomDay.Length;
