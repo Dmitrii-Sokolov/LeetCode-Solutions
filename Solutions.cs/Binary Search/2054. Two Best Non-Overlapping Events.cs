@@ -37,7 +37,7 @@
       return result;
     }
 
-    // Find first that's appropriate
+    // Find last that's appropriate
     private static int FindMax(int min, int max, Func<int, bool> check)
     {
       while (max > min)
