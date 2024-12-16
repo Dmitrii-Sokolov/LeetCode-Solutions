@@ -1,4 +1,8 @@
-﻿public class Node
+﻿#pragma warning disable IDE1006 // Naming Styles
+/// <summary>
+/// Definition for a Node.
+/// </summary>
+public class Node
 {
   public int val;
   public IList<Node> children;
@@ -16,3 +20,4 @@
     children = _children;
   }
 }
+#pragma warning restore IDE1006 // Naming Styles
