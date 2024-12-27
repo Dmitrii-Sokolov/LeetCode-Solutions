@@ -7,6 +7,9 @@
     private static bool IsIntersect(int[] a, int[] b)
       => b[0] <= a[0] && a[0] <= b[1] ||
       a[0] <= b[0] && b[0] <= a[1];
+
+    private static int DivCeil(int a, int b) => 1 + (a - 1) / b;
+    private static long DivCeil(long a, long b) => 1 + (a - 1) / b;
   }
 
   public struct Vector2(int x, int y) : IEquatable<Vector2>

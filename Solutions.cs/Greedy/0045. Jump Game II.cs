@@ -24,9 +24,8 @@
       {
         var limit = max;
         for (var i = min; i <= limit; i++)
-        {
           max = Math.Max(max, i + nums[i]);
-        }
+
         min = limit;
         step++;
       }
