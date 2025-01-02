@@ -21,7 +21,9 @@
       {
         var ch = word[i];
         if (last == ch && repeats < 9)
+        {
           repeats++;
+        }
         else
         {
           result.Append(repeats);

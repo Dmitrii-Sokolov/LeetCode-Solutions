@@ -20,7 +20,9 @@
       for (var i = 1; i < chars.Length; i++)
       {
         if (chars[i - 1] == chars[i])
+        {
           repeats++;
+        }
         else
         {
           chars[pointer++] = chars[i - 1];
