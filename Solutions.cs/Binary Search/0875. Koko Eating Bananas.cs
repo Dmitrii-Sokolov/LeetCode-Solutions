@@ -3,7 +3,7 @@
 
   /// <summary>
   /// 875. Koko Eating Bananas
-  /// https://leetcode.com/problems/koko-eating-bananas/description/
+  /// https://leetcode.com/problems/koko-eating-bananas
   /// 
   /// Difficulty Medium
   /// Acceptance 48.7%

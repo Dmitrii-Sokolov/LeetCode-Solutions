@@ -3,7 +3,7 @@
 
   /// <summary>
   /// 53. Maximum Subarray
-  /// https://leetcode.com/problems/maximum-subarray/description/
+  /// https://leetcode.com/problems/maximum-subarray
   /// 
   /// Difficulty Medium
   /// Acceptance 51.5%

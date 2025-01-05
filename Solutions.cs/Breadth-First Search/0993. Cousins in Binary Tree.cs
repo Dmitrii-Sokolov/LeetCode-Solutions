@@ -3,7 +3,7 @@
 
   /// <summary>
   /// 993. Cousins in Binary Tree
-  /// https://leetcode.com/problems/cousins-in-binary-tree/description/
+  /// https://leetcode.com/problems/cousins-in-binary-tree
   /// 
   /// Difficulty Easy
   /// Acceptance 57.3%
