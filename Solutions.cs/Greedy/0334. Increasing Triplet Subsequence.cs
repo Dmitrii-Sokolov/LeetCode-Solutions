@@ -17,7 +17,6 @@
     {
       var first = int.MaxValue;
       var second = int.MaxValue;
-
       foreach (var number in numbers)
       {
         if (number > second)
