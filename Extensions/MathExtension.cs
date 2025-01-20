@@ -48,5 +48,7 @@
 
     public override readonly bool Equals(object obj) => obj is Vector2 v && Equals(v);
     public override readonly int GetHashCode() => HashCode.Combine(X, Y);
+
+    public override string ToString() => $"({X}, {Y})";
   }
 }
