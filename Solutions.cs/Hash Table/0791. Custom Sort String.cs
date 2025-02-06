@@ -22,13 +22,7 @@
 
       return string.Concat(s.OrderBy(Priority));
 
-      int Priority(char c)
-      {
-        if (dic.TryGetValue(c, out var i))
-          return i;
-
-        return -1;
-      }
+      int Priority(char c) => dic.TryGetValue(c, out var i) ? i : -1;
     }
   }
 }

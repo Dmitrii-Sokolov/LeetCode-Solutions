@@ -38,7 +38,9 @@
           {
             var count = map[c + i];
             if (count > 1)
+            {
               map[c + i] = count - 1;
+            }
             else
             {
               map.Remove(c + i);
