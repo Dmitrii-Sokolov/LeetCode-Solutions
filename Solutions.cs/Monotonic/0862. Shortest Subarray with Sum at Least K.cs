@@ -56,7 +56,9 @@
       {
         var middle = 1 + (max + min >> 1);
         if (check(middle))
+        {
           min = middle;
+        }
         else
         {
           max = middle - 1;

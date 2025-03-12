@@ -30,11 +30,14 @@
         if (!isFirst)
           result.Append(' ');
 
-
         if (trie.TryFindPrefix(word, out var count))
+        {
           result.Append(word, 0, count);
+        }
         else
+        {
           result.Append(word);
+        }
 
         isFirst = false;
       }
