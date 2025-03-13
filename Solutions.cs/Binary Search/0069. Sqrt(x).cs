@@ -20,8 +20,8 @@
       var test = x;
       while (test > 0)
       {
-        test = test >> 2;
-        max = max << 1;
+        test >>= 2;
+        max <<= 1;
       }
 
       while (min < max)
@@ -33,6 +33,7 @@
         {
           if (max - min == 1)
             return max * max <= x ? max : min;
+
           min = middle;
         }
         else if (middle2 > x)
