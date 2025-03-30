@@ -4,50 +4,50 @@
   {
     private readonly int Size;
     private readonly int[] Parents;
-    private readonly int[] ChildrenCount;
+    private readonly int[] Heights;
 
     public int GroupsCount { get; private set; }
 
     public UnionFind(int size)
     {
       Size = size;
-      Parents = Enumerable.Range(0, Size).ToArray();
-      ChildrenCount = Enumerable.Range(0, Size).Select(i => 1).ToArray();
       GroupsCount = size;
+
+      Parents = new int[size];
+      Heights = new int[size];
+
+      for (var i = 0; i < size; i++)
+        Parents[i] = i;
     }
 
     public UnionFind(UnionFind other)
     {
+
       Size = other.Size;
-      Parents = other.Parents.ToArray();
-      ChildrenCount = other.Parents.ToArray();
+      Parents = [.. other.Parents];
+      Heights = [.. other.Parents];
       GroupsCount = other.GroupsCount;
     }
 
     public bool IsUnited(int node0, int node1)
       => node0 == node1 || FindSubroot(node0) == FindSubroot(node1);
 
-    public bool TryUnite(int node0, int node1)
+    public bool TryUnite(int parent, int child)
     {
-      if (node0 == node1)
+      if (parent == child)
         return false;
 
-      node0 = FindSubroot(node0);
-      node1 = FindSubroot(node1);
+      parent = FindSubroot(parent);
+      child = FindSubroot(child);
 
-      if (node0 == node1)
+      if (parent == child)
         return false;
 
-      if (ChildrenCount[node0] < ChildrenCount[node1])
-      {
-        Parents[node0] = node1;
-        ChildrenCount[node1] += ChildrenCount[node0];
-      }
-      else
-      {
-        Parents[node1] = node0;
-        ChildrenCount[node0] += ChildrenCount[node1];
-      }
+      if (Heights[parent] < Heights[child])
+        (parent, child) = (child, parent);
+
+      Parents[child] = parent;
+      Heights[parent] = Math.Max(Heights[parent], Heights[child] + 1);
 
       GroupsCount--;
 
@@ -56,7 +56,7 @@
 
     private int FindSubroot(int node)
     {
-      while (Parents[node] != node)
+      while (node != Parents[node])
         node = Parents[node];
 
       return node;

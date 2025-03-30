@@ -1,4 +1,4 @@
-﻿namespace Extensions
+﻿namespace MathExtension
 {
   public static class Math
   {

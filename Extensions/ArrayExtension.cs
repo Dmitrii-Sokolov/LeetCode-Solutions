@@ -1,4 +1,4 @@
-﻿namespace Extensions
+﻿namespace ArrayExtension
 {
   public static class Array
   {
