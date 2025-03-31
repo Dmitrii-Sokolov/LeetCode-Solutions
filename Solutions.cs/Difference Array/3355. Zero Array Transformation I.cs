@@ -3,7 +3,7 @@
 
   /// <summary>
   /// 3355. Zero Array Transformation I
-  /// https://leetcode.com/problems/zero-array-transformation-i/description/
+  /// https://leetcode.com/problems/zero-array-transformation-i
   /// 
   /// Difficulty Medium
   /// Acceptance 43.3%

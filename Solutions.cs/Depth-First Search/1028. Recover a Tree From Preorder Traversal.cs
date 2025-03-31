@@ -3,7 +3,7 @@
 
   /// <summary>
   /// 1028. Recover a Tree From Preorder Traversal
-  /// https://leetcode.com/problems/recover-a-tree-from-preorder-traversal/description/?envType=daily-question&envId=2025-02-22
+  /// https://leetcode.com/problems/recover-a-tree-from-preorder-traversal
   /// 
   /// Difficulty Hard
   /// Acceptance 78.9%

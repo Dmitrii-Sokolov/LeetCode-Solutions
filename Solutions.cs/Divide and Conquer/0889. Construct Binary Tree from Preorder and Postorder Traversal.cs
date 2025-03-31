@@ -3,7 +3,7 @@
 
   /// <summary>
   /// 889. Construct Binary Tree from Preorder and Postorder Traversal
-  /// https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/?envType=daily-question&envId=2025-02-23
+  /// https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal
   /// 
   /// Difficulty Medium
   /// Acceptance 73.9%
